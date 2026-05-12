@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 82.0.1
+Summary: A machine learning project for classifying chest diseases using convolutional neural networks.
+Home-page: https://github.com/satyarth/MLOPs-Chest-Disease-Classification
+Author: satyarth
+Author-email: roniwatson42@gmail.com
+Project-URL: Bug Tracker, https://github.com/satyarth/MLOPs-Chest-Disease-Classification/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+#MLOPs Deep Learning Project
+
+#Bash
+conda create -n chest python=3.8 -y
+
+#Activate environment
+conda activate chest
+
+#install requireemnts
+pip install -r requirements.txt
