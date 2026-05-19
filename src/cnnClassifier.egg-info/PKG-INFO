@@ -6,10 +6,12 @@ Home-page: https://github.com/satyarth/MLOPs-Chest-Disease-Classification
 Author: satyarth
 Author-email: roniwatson42@gmail.com
 Project-URL: Bug Tracker, https://github.com/satyarth/MLOPs-Chest-Disease-Classification/issues
+License-File: LICENSE
 Dynamic: author
 Dynamic: author-email
 Dynamic: description
 Dynamic: home-page
+Dynamic: license-file
 Dynamic: project-url
 Dynamic: summary
 
@@ -23,3 +25,15 @@ conda activate chest
 
 #install requireemnts
 pip install -r requirements.txt
+
+
+#Workflows
+
+Update config.yaml
+Update params.yaml
+Update the entity
+Update the configuration manager in src config
+Update the components
+Update the pipeline
+Update the main.py
+Update the dvc.yaml

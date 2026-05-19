@@ -6,12 +6,12 @@ import json
 import joblib
 import base64
 from ensure import ensure_annotations
-from box import config_box
+from box import ConfigBox
 from pathlib import Path
-from typing import Any
+from typing import List, Any
 
 @ensure_annotations
-def read_yaml(path_to_yaml: Path) -> config_box:
+def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
     Reads a YAML file and returns its contents as a Box object.
 
@@ -22,7 +22,7 @@ def read_yaml(path_to_yaml: Path) -> config_box:
         BoxValueError: If the YAML file is empty or cannot be parsed.
 
     Returns:
-        config_box: A Box object containing the contents of the YAML file.
+        ConfigBox: A Box object containing the contents of the YAML file.
     """
     try:
         with open(path_to_yaml) as yaml_file:
@@ -36,7 +36,7 @@ def read_yaml(path_to_yaml: Path) -> config_box:
 
 
 @ensure_annotations
-def create_directories(path_to_directories: list[Path], verbose=True):
+def create_directories(path_to_directories: list, verbose=True):
     """
     Creates directories specified in the list of paths.
 

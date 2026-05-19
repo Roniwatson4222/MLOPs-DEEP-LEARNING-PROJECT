@@ -1,0 +1,19 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://drive.google.com/file/d/1UCLrUf3U8zwe9EqNlN7p_2w9678JDibZ/view?usp=sharing
+  local_data_file: artifacts/data_ingestion/chest_scan.zip
+  unzip_dir: artifacts/data_ingestion/chest_scan
+
+prepare base model:
+  root_dir: artifacts/prepare_base_model
+  base_model_path: artifacts/prepare_base_model/base_model.h5
+  updated_base_model_path: artifacts/prepare_base_model/updated_base_model.h5
+
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/trained_model.h5
+  
