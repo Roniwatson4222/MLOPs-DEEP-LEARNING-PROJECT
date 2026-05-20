@@ -16,4 +16,5 @@ Flask
 Flask-Cors
 ensure
 python-box
+dagshub
 -e .

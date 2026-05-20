@@ -2,7 +2,7 @@ import os
 from cnnClassifier.constants import * #CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig, PrepareBaseModelConfig, 
-                                                    TrainingConfig)
+                                                    TrainingConfig, EvaluationConfig)
 
 
 class ConfigurationManager:
@@ -49,8 +49,7 @@ class ConfigurationManager:
         prepare_base_model=self.config.prepare_base_model
         params = self.params
         training_data = os.path.join(self.config.data_ingestion.unzip_dir)
-        print(f"Training data directory: {training_data}") # Log the training data directory
-        #artifacts\data_ingestion\chest_scan\Data\train
+        print(f"Training data directory: {training_data}")
         create_directories([Path(training.root_dir)])
 
         training_config = TrainingConfig(
@@ -66,3 +65,14 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/trained_model.h5",
+            training_data="artifacts/data_ingestion/chest_scan",
+            mlflow_uri="https://dagshub.com/Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config    

@@ -1838,3 +1838,155 @@ TypeError: TrainingConfig.__init__() got an unexpected keyword argument 'params_
 [2026-05-19 16:41:38,150 : INFO : main : >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2026-05-20 01:15:46,772 : INFO : main : stage Data Ingestion Stage started]
+[2026-05-20 01:15:46,873 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-20 01:15:46,883 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 01:15:46,929 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 01:15:46,930 : INFO : common : created directory at: artifacts]
+[2026-05-20 01:15:46,933 : INFO : common : created directory at: artifacts/data_ingestion]
+[2026-05-20 01:15:46,933 : INFO : data_ingestion : File already exists at artifacts\data_ingestion\chest_scan.zip]
+[2026-05-20 01:15:52,185 : INFO : data_ingestion : Unzipped data size: ~ 0 KB]
+[2026-05-20 01:15:52,188 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+]
+[2026-05-20 01:15:52,188 : INFO : main : stage Data Ingestion Stage completed]
+[2026-05-20 01:15:52,190 : INFO : main : stage Prepare Base Model Stage started]
+[2026-05-20 01:23:08,363 : WARNING : module_wrapper : From E:\MLOPs Deep Learning Project\src\cnnClassifier\components\model_trainer.py:6: The name tf.enable_eager_execution is deprecated. Please use tf.compat.v1.enable_eager_execution instead.
+]
+[2026-05-20 01:23:15,601 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2026-05-20 01:23:15,624 : INFO : helpers : Accessing as Roniwatson4222]
+[2026-05-20 01:23:16,481 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/repos/Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT "HTTP/1.1 200 OK"]
+[2026-05-20 01:23:17,285 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2026-05-20 01:23:17,291 : INFO : helpers : Initialized MLflow to track repo "Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT"]
+[2026-05-20 01:23:17,319 : INFO : helpers : Repository Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT initialized!]
+[2026-05-20 01:23:20,792 : INFO : main : stage Data Ingestion Stage started]
+[2026-05-20 01:23:20,792 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-20 01:23:20,792 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 01:23:20,803 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 01:23:20,808 : INFO : common : created directory at: artifacts]
+[2026-05-20 01:23:20,823 : INFO : common : created directory at: artifacts/data_ingestion]
+[2026-05-20 01:23:20,824 : INFO : data_ingestion : File already exists at artifacts\data_ingestion\chest_scan.zip]
+[2026-05-20 01:23:25,568 : INFO : data_ingestion : Unzipped data size: ~ 0 KB]
+[2026-05-20 01:23:25,583 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+]
+[2026-05-20 01:23:25,583 : INFO : main : stage Data Ingestion Stage completed]
+[2026-05-20 01:23:25,583 : INFO : main : stage Prepare Base Model Stage started]
+[2026-05-20 01:23:25,583 : INFO : stage_02_prepare_base_model : >>>>>>> stage Prepare Base Model Stage started <<<<<<<]
+[2026-05-20 01:23:25,588 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 01:23:25,596 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 01:23:25,597 : INFO : common : created directory at: artifacts]
+[2026-05-20 01:23:25,600 : INFO : common : created directory at: artifacts/prepare_base_model]
+[2026-05-20 01:23:26,777 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 01:23:27,288 : WARNING : config : TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.]
+[2026-05-20 01:23:27,796 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 01:23:28,216 : INFO : stage_02_prepare_base_model : >>>>>>> stage Prepare Base Model Stage completed <<<<<<<
+
+]
+[2026-05-20 01:23:28,216 : INFO : main : stage Prepare Base Model Stage completed]
+[2026-05-20 01:23:28,216 : INFO : main : *******************]
+[2026-05-20 01:23:28,216 : INFO : main : >>>>>> stage Training started <<<<<<]
+[2026-05-20 01:23:28,216 : INFO : stage_03_model_trainer : Initializing ModelTrainingPipeline...]
+[2026-05-20 01:23:28,216 : INFO : stage_03_model_trainer : Fetching training configuration...]
+[2026-05-20 01:23:28,216 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 01:23:28,232 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 01:23:28,234 : INFO : common : created directory at: artifacts]
+[2026-05-20 01:23:28,236 : INFO : common : created directory at: artifacts\training]
+[2026-05-20 01:23:28,237 : INFO : stage_03_model_trainer : Initializing Training class...]
+[2026-05-20 01:23:28,237 : INFO : stage_03_model_trainer : Loading base model...]
+[2026-05-20 01:23:28,700 : WARNING : legacy_h5_format : No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2026-05-20 01:23:28,714 : INFO : stage_03_model_trainer : Preparing data generators...]
+[2026-05-20 01:23:29,130 : INFO : stage_03_model_trainer : Starting model training...]
+[2026-05-20 01:51:54,796 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 01:51:57,740 : INFO : stage_03_model_trainer : Model training completed successfully.]
+[2026-05-20 01:51:57,755 : INFO : main : >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-05-20 01:51:57,755 : INFO : main : *******************]
+[2026-05-20 01:51:57,771 : INFO : main : >>>>>> stage Evaluation stage started <<<<<<]
+[2026-05-20 01:51:57,807 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 01:51:57,821 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 01:51:57,829 : INFO : common : created directory at: artifacts]
+[2026-05-20 01:51:57,840 : ERROR : main : [Errno 2] Unable to synchronously open file (unable to open file: name = 'artifacts/training/model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)]
+Traceback (most recent call last):
+  File "E:\MLOPs Deep Learning Project\main.py", line 47, in <module>
+    model_evalution.main()
+  File "E:\MLOPs Deep Learning Project\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 19, in main
+    evaluation.evaluation()
+  File "E:\MLOPs Deep Learning Project\src\cnnClassifier\components\evaluation.py", line 53, in evaluation
+    self.model = self.load_model(self.config.path_of_model)
+  File "E:\MLOPs Deep Learning Project\src\cnnClassifier\components\evaluation.py", line 49, in load_model
+    return tf.keras.models.load_model(path)
+  File "C:\Users\Ron\anaconda3\envs\chest\lib\site-packages\keras\src\saving\saving_api.py", line 196, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+  File "C:\Users\Ron\anaconda3\envs\chest\lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 120, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+  File "C:\Users\Ron\anaconda3\envs\chest\lib\site-packages\h5py\_hl\files.py", line 564, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "C:\Users\Ron\anaconda3\envs\chest\lib\site-packages\h5py\_hl\files.py", line 238, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 56, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 57, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'artifacts/training/model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2026-05-20 16:27:58,965 : WARNING : module_wrapper : From E:\MLOPs Deep Learning Project\src\cnnClassifier\components\model_trainer.py:6: The name tf.enable_eager_execution is deprecated. Please use tf.compat.v1.enable_eager_execution instead.
+]
+[2026-05-20 16:28:05,139 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2026-05-20 16:28:05,172 : INFO : helpers : Accessing as Roniwatson4222]
+[2026-05-20 16:28:06,286 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/repos/Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT "HTTP/1.1 200 OK"]
+[2026-05-20 16:28:07,362 : INFO : _client : HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2026-05-20 16:28:07,368 : INFO : helpers : Initialized MLflow to track repo "Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT"]
+[2026-05-20 16:28:07,370 : INFO : helpers : Repository Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT initialized!]
+[2026-05-20 16:28:11,049 : INFO : main : stage Data Ingestion Stage started]
+[2026-05-20 16:28:11,050 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-20 16:28:11,057 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 16:28:11,069 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 16:28:11,071 : INFO : common : created directory at: artifacts]
+[2026-05-20 16:28:11,074 : INFO : common : created directory at: artifacts/data_ingestion]
+[2026-05-20 16:28:11,075 : INFO : data_ingestion : File already exists at artifacts\data_ingestion\chest_scan.zip]
+[2026-05-20 16:28:15,248 : INFO : data_ingestion : Unzipped data size: ~ 0 KB]
+[2026-05-20 16:28:15,251 : INFO : stage_01_data_ingestion : >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+]
+[2026-05-20 16:28:15,251 : INFO : main : stage Data Ingestion Stage completed]
+[2026-05-20 16:28:15,251 : INFO : main : stage Prepare Base Model Stage started]
+[2026-05-20 16:28:15,252 : INFO : stage_02_prepare_base_model : >>>>>>> stage Prepare Base Model Stage started <<<<<<<]
+[2026-05-20 16:28:15,258 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 16:28:15,262 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 16:28:15,263 : INFO : common : created directory at: artifacts]
+[2026-05-20 16:28:15,264 : INFO : common : created directory at: artifacts/prepare_base_model]
+[2026-05-20 16:28:16,458 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 16:28:17,307 : WARNING : config : TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.]
+[2026-05-20 16:28:17,860 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 16:28:18,223 : INFO : stage_02_prepare_base_model : >>>>>>> stage Prepare Base Model Stage completed <<<<<<<
+
+]
+[2026-05-20 16:28:18,223 : INFO : main : stage Prepare Base Model Stage completed]
+[2026-05-20 16:28:18,223 : INFO : main : *******************]
+[2026-05-20 16:28:18,224 : INFO : main : >>>>>> stage Training started <<<<<<]
+[2026-05-20 16:28:18,224 : INFO : stage_03_model_trainer : Initializing ModelTrainingPipeline...]
+[2026-05-20 16:28:18,224 : INFO : stage_03_model_trainer : Fetching training configuration...]
+[2026-05-20 16:28:18,231 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 16:28:18,234 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 16:28:18,236 : INFO : common : created directory at: artifacts]
+[2026-05-20 16:28:18,238 : INFO : common : created directory at: artifacts\training]
+[2026-05-20 16:28:18,238 : INFO : stage_03_model_trainer : Initializing Training class...]
+[2026-05-20 16:28:18,239 : INFO : stage_03_model_trainer : Loading base model...]
+[2026-05-20 16:28:18,694 : WARNING : legacy_h5_format : No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2026-05-20 16:28:18,700 : INFO : stage_03_model_trainer : Preparing data generators...]
+[2026-05-20 16:28:19,050 : INFO : stage_03_model_trainer : Starting model training...]
+[2026-05-20 16:56:17,084 : WARNING : saving_api : You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2026-05-20 16:56:18,156 : INFO : stage_03_model_trainer : Model training completed successfully.]
+[2026-05-20 16:56:18,174 : INFO : main : >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-05-20 16:56:18,176 : INFO : main : *******************]
+[2026-05-20 16:56:18,176 : INFO : main : >>>>>> stage Evaluation stage started <<<<<<]
+[2026-05-20 16:56:18,235 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2026-05-20 16:56:18,247 : INFO : common : yaml file: E:\MLOPs Deep Learning Project\params.yaml loaded successfully]
+[2026-05-20 16:56:18,255 : INFO : common : created directory at: artifacts]
+[2026-05-20 16:56:19,011 : WARNING : saving_utils : Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-20 16:58:37,014 : INFO : common : json file saved at: scores.json]
+[2026-05-20 16:58:37,016 : INFO : main : >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]

@@ -8,6 +8,7 @@ src/cnnClassifier.egg-info/dependency_links.txt
 src/cnnClassifier.egg-info/top_level.txt
 src/cnnClassifier/components/__init__.py
 src/cnnClassifier/components/data_ingestion.py
+src/cnnClassifier/components/evaluation.py
 src/cnnClassifier/components/model_trainer.py
 src/cnnClassifier/components/prepare_base_model.py
 src/cnnClassifier/config/__init__.py
