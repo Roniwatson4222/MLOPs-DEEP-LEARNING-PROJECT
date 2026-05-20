@@ -30,6 +30,6 @@ venv/
 #Ignore cnnClassifier.egg-info
 cnnClassifier.egg-info/
 
-#Ignore MLOPs demo settings
-settings.json/
-test.text/
+#Ignore MLOPs demo folder files
+MLOPs_tool_Demo/artifacts/
+MLOPs_tool_Demo/settings.json/
