@@ -1,0 +1,35 @@
+# Ignore datasets and images
+*.jpg
+*.jpeg
+*.png
+
+# Ignore artifacts folder
+artifacts/
+
+# Ignore models
+*.h5
+*.keras
+*.pb
+
+# Ignore logs
+logs/
+research/logs/
+
+# Ignore caches
+__pycache__/
+*.pyc
+*.ckpt
+*.tmp
+*.zip
+
+#Ignore environment files
+chest/
+venv/
+.env
+
+#Ignore cnnClassifier.egg-info
+cnnClassifier.egg-info/
+
+#Ignore MLOPs demo settings
+settings.json/
+test.text/
