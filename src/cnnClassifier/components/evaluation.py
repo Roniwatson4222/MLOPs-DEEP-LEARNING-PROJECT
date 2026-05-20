@@ -9,10 +9,6 @@ from urllib.parse import urlparse
 import dagshub
 dagshub.init(repo_owner='Roniwatson4222', repo_name='MLOPs-DEEP-LEARNING-PROJECT', mlflow=True)
 
-import mlflow
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
 
 class Evaluation:
     def __init__(self, config: EvaluationConfig):
