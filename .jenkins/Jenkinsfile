@@ -44,14 +44,36 @@ pipeline {
       }
     }
 
-    stage('Continuous Deployment') {
-      steps {
-        sshagent(['ssh_key']) {
-          sh "ssh -o StrictHostKeyChecking=no -l ubuntu 98.130.33.228 'cd /home/ubuntu/ && wget https://raw.githubusercontent.com/Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT/refs/heads/main/docker-compose.yaml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region ap-south-2 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.ap-south-2.amazonaws.com && docker compose up -d '"
-        }
+  stage('Continuous Deployment') {
+    steps {
+      sshagent(['ssh_key']) {
+        sh """
+          ssh -o StrictHostKeyChecking=no -l ubuntu 98.130.33.228 '
+          cd /home/ubuntu/ &&
+          wget -O docker-compose.yaml https://raw.githubusercontent.com/Roniwatson4222/MLOPs-DEEP-LEARNING-PROJECT/refs/heads/main/docker-compose.yaml &&
+          aws ecr get-login-password --region ap-south-2 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.ap-south-2.amazonaws.com &&
+          IMAGE_NAME=${ECR_REPOSITORY}:latest docker compose pull &&
+          IMAGE_NAME=${ECR_REPOSITORY}:latest docker compose up -d --force-recreate
+        '
+      """
       }
     }
   }
+
+stage('Verify Deployment') {
+  steps {
+    sshagent(['ssh_key']) {
+      sh """
+        ssh -o StrictHostKeyChecking=no -l ubuntu 98.130.33.228 '
+          cd /home/ubuntu/ &&
+          docker compose ps &&
+          docker inspect --format='{{json .State.Health}}' $(docker compose ps -q application)
+        '
+      """
+    }
+  }
+}
+
 
   post {
     always {
