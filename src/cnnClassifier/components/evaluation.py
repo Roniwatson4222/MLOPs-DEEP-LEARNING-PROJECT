@@ -66,6 +66,10 @@ class Evaluation:
             mlflow.log_metrics(
                 {"loss": self.score[0], "accuracy": self.score[1]}
             )
+
+            # Log evaluation artifact (scores.json)
+            mlflow.log_artifact("scores.json")
+
             # Model registry does not work with file store
             if tracking_url_type_store != "file":
 

@@ -8,7 +8,7 @@ class PredictionPipeline:
         self.filename = filename
 
     def predict(self):
-        model = load_model(os.path.join("artifacts", "model", "model.h5"))
+        model = load_model(os.path.join("artifacts", "training", "trained_model.h5"))
         imagename = self.filename
         test_image = image.load_img(imagename, target_size=(128, 128))
         test_image = image.img_to_array(test_image)
@@ -18,8 +18,7 @@ class PredictionPipeline:
 
         if result[0]==1:
             prediction = "Healthy"
-            return [{image: prediction}]
+            return [{"prediction": prediction}]
         else:
             prediction = "Unhealthy"
-            return [{image: prediction}]
-        
+            return [{"prediction": prediction}]
